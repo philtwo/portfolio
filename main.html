@@ -12,17 +12,16 @@
     </style>
 </head>
 <body>
-    <header>
-        <img id="PFP" src="omenHam.png">
-        <h1 id="name">Philip Jones</h1>
-    </header>
+    <button id="theme-toggle"></button>
     <nav>
         <ul>
+            <img id="PFP" src="media/omenHam.png">
+            <li>Philip Jones</li>
             <li id="github_icon"><a href="https://github.com/philtwo" target="_blank" class="devicon-github-original" title="GitHub"></a></li>
             <li id="linkedin_icon"><a href="https://www.linkedin.com/in/philip-jones-12b2181b2/" target="_blank" class="devicon-linkedin-plain" title="LinkedIn"></a></li>
-            <li><a href="#about" title="about"><img src="icons8-about-250.png" id="about_icon" width="35px"></a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li id="about_icon"><img src="media/icons8-about-250.png" id="about_icon"><a href="#about" title="about" ></a></li>
+            <li id="project_icon"><img src="media/icons8-projects-100.png" width="35px"><a href="#projects" title="projects"></a></li>
+            <li id="contact_icon"><img src="media/icons8-contact-90.png" width="35px"><a href="#contact" title="contact"></a></li>
         </ul>
     </nav>
     <div class="container">
@@ -44,7 +43,11 @@
         </section>
     </div>
     <footer>
-        <p>&copy; 2025 Philip Jones. All rights reserved.</p>
+        <p>&copy; 2025 Philip Jones. All rights reserved.
+            <div 
+                id="icons8_shoutout">icons by icons8
+            </div>
+        </p>
     </footer>
 </body>
 </html>
