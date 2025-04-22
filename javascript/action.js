@@ -5,7 +5,8 @@ const footer = document.querySelector('footer');
 const menuToggle = document.getElementById('menu-toggle');
 const mobileNav = document.getElementById('mobile-nav');
 const burgerMenu = document.getElementById('menu-toggle');
-const allLinks = document.querySelectorAll('a');
+const projects = document.getElementById('projects');
+const projectDescriptions = document.getElementById('project-description');
 
 // Initialize the theme
 function initializeTheme() {
@@ -27,9 +28,8 @@ function applyLightMode() {
     toggleButton.textContent = 'Dark Mode';
     burgerMenu.classList.add('light-mode');
     mobileNav.classList.add('light-mode');
-    allLinks.forEach(link => {
-        link.classList.add('light-mode');
-    });
+    projects.classList.add('light-mode');
+    projectDescriptions.classList.add('light-mode');
     localStorage.setItem('theme', 'light-mode'); // save theme to local storage
 }
 
@@ -42,9 +42,8 @@ function applyDarkMode() {
     toggleButton.textContent = 'Light Mode';
     burgerMenu.classList.remove('light-mode');
     mobileNav.classList.remove('light-mode');
-    allLinks.forEach(link => {
-        link.classList.remove('light-mode');
-    });
+    projects.classList.remove('light-mode');
+    projectDescriptions.classList.remove('light-mode');
     localStorage.setItem('theme', 'dark-mode'); // save theme to local storage
 }
 

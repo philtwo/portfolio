@@ -13,7 +13,7 @@ p{
 }
 
 a.light-mode {
-    color: #333;
+    color: #333 !important;
 }
 
 body.light-mode {
@@ -66,7 +66,7 @@ nav ul li {
 
 nav ul li a {
     display: block;
-    width: 70%;
+    width: 92%;
     font-family: Arial, Helvetica, sans-serif !important;
     color: white;
     text-decoration: none;;
@@ -79,6 +79,7 @@ nav ul li a {
 
 nav ul li a:hover {
     box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.253);
+    
 }
 
 nav ul li a:active {
@@ -110,6 +111,44 @@ nav.light-mode ul li a {
     color: #333;
 }
 
+#contact {
+    text-align: center;
+}
+
+#contact.light-mode {
+    background: #e0e0e0;
+}
+
+#contact ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+
+}
+
+#contact ul li {
+    margin-bottom: 25px;
+    list-style: none;
+}
+
+#contact ul li a {
+    color: orange;
+    flex: 1;
+    text-decoration-line: none;
+    padding: 10px;
+    border-radius: 8px;
+    transition: box-shadow 0.12s, background-color 0.12s, color 0.12s;
+}
+
+#contact.light-mode ul li a {
+    color: #333;
+}
+
+#contact a:hover {
+    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.253);
+}
+
 .container {
     max-width: 62.5%;
     min-height: 3000px;
@@ -127,6 +166,47 @@ nav.light-mode ul li a {
     border-radius: 8px;
     transition: background-color 0.3s;
 }
+
+.project-embed {
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.253);    
+    flex: 1; /* Take up available space on the right */
+    display: flex;
+    justify-content: center; /* Center the embed horizontally */
+    align-items: center; /* Center the embed vertically */
+}
+
+.project-embed img{
+    display: block;
+    border-radius: 8px;
+}
+
+#projects {
+    display: flex; /* Use Flexbox for layout */
+    flex-direction: row; /* Align items in a row */
+    justify-content: space-between; /* Add space between the two sections */
+    align-items: flex-start; /* Align items at the top */
+    gap: 20px; /* Add space between the left and right sections */
+    margin-bottom: 20px; /* Add spacing between project cards */
+    padding: 20px; /* Add padding inside the card */
+    background: #3c3d3f; /* Background color for the card */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    transition: background-color 0.3s;
+}
+
+#projects.light-mode {
+    background: #f4f4f4; /* Light mode background color */
+}
+
+.project-info {
+    flex: 1; /* Take up available space on the left */
+    display: flex;
+    flex-direction: column; /* Stack title and description vertically */
+    justify-content: flex-start;
+}
+
+
 
 body.light-mode .section {
     background: #e0e0e0;
@@ -260,6 +340,11 @@ footer.light-mode {
 
     nav ul {
         display: none; /* Hide the default nav bar */
+    }
+
+    .project-card {
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center; /* Center align the content */
     }
 }
 
