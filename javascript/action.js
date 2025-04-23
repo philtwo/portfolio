@@ -5,8 +5,38 @@ const footer = document.querySelector('footer');
 const menuToggle = document.getElementById('menu-toggle');
 const mobileNav = document.getElementById('mobile-nav');
 const burgerMenu = document.getElementById('menu-toggle');
-const projects = document.getElementById('projects');
-const projectDescriptions = document.getElementById('project-description');
+const projectCard = document.getElementById('projects')
+const cursor = document.querySelector('.cursor');
+var timeout;
+
+//cursor movement
+document.addEventListener('mousemove', (e) => {
+    if (window.innerWidth < 768) {
+        cursor.style.display = 'none'; // Hide the cursor on mobile devices
+        return; // Exit the function if on mobile
+    }
+    else {
+        let y = e.clientY
+        let x = e.clientX
+        
+        cursor.style.top = y + 'px';
+        cursor.style.left = x + 'px';
+        cursor.style.display = 'block';
+    }
+    //stop animation when mouse is not moving
+    // function mouseStopped() {
+    //     cursor.style.display = 'none';
+    // }
+
+    // //hide animation
+    // clearTimeout(timeout);
+    // timeout = setTimeout(mouseStopped, 1000); // 1 second delay
+});
+
+//stop hover off screen
+// document.addEventListener("mouseout", () => {
+//     cursor.style.display = 'none';
+// });
 
 // Initialize the theme
 function initializeTheme() {
@@ -28,9 +58,11 @@ function applyLightMode() {
     toggleButton.textContent = 'Dark Mode';
     burgerMenu.classList.add('light-mode');
     mobileNav.classList.add('light-mode');
-    projects.classList.add('light-mode');
-    projectDescriptions.classList.add('light-mode');
+    cursor.classList.add('light-mode');
     localStorage.setItem('theme', 'light-mode'); // save theme to local storage
+    if(projectCard) {// Check if projectCard exists
+        projectCard.classList.add('light-mode');
+    }
 }
 
 function applyDarkMode() {
@@ -42,9 +74,11 @@ function applyDarkMode() {
     toggleButton.textContent = 'Light Mode';
     burgerMenu.classList.remove('light-mode');
     mobileNav.classList.remove('light-mode');
-    projects.classList.remove('light-mode');
-    projectDescriptions.classList.remove('light-mode');
+    cursor.classList.remove('light-mode');
     localStorage.setItem('theme', 'dark-mode'); // save theme to local storage
+    if(projectCard) {// Check if projectCard exists
+        projectCard.classList.remove('light-mode');
+    }
 }
 
 // Toggle theme

@@ -13,26 +13,23 @@
       href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
     />
     <link rel="stylesheet" href="styles/styles.css" />
-    <title>Portfolio</title>
+    <title>Philip Jones</title>
   </head>
   <body>
+    <div class="cursor"></div>
     <nav>
       <ul>
         <img id="PFP" src="media/omenHam.png" alt="Profile Picture" />
         <li id="philip"><strong>Philip Jones</strong></li>
+        <hr />
         <li>
-          <a href="/about.html" title="About Me"
+          <a href="#about-section" title="About Me"
             ><i class="ti ti-info-circle"></i> About</a
           >
         </li>
         <li>
-          <a href="/projects.html" title="Projects"
+          <a href="#project-section" title="Projects"
             ><i class="ti ti-geometry"></i> Projects</a
-          >
-        </li>
-        <li>
-          <a href="/contact.html" title="Contact"
-            ><i class="ti ti-phone"></i> Contact</a
           >
         </li>
         <li>
@@ -48,20 +45,39 @@
             ><i class="devicon-linkedin-plain"></i> LinkedIn</a
           >
         </li>
+        <li>
+          <a href="mailto:philipjones010425@gmail.com" target="_blank">
+            <i class="ti ti-mail"></i>
+            Email
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://discordapp.com/users/357316660962787330"
+            target="_blank"
+          >
+            <i class="ti ti-brand-discord"></i> Discord
+          </a>
+        </li>
       </ul>
       <button id="theme-toggle">Light Mode</button>
     </nav>
     <div id="hamburger-menu">
       <button id="menu-toggle">☰</button>
       <ul id="mobile-nav" class="hidden">
+        <img
+          id="PFP"
+          src="media/omenHam.png"
+          alt="Profile Picture"
+          style="width: 50%; margin-top: 20px"
+        />
+        <li id="philip"><strong>Philip Jones</strong></li>
+        <div id="divider"></div>
         <li>
-          <a href="/about.html"><i class="ti ti-info-circle"></i> About</a>
+          <a href="#about-section"><i class="ti ti-info-circle"></i> About</a>
         </li>
         <li>
-          <a href="/projects.html"><i class="ti ti-geometry"></i> Projects</a>
-        </li>
-        <li>
-          <a href="/contact.html"><i class="ti ti-phone"></i> Contact</a>
+          <a href="#project-section"><i class="ti ti-geometry"></i> Projects</a>
         </li>
         <li>
           <a href="https://github.com/philtwo" target="_blank"
@@ -75,9 +91,76 @@
             ><i class="devicon-linkedin-plain"></i> LinkedIn</a
           >
         </li>
+        <li>
+          <a href="mailto:philipjones010425@gmail.com" target="_blank">
+            <i class="ti ti-mail"></i>
+            Email
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://discordapp.com/users/357316660962787330"
+            target="_blank"
+          >
+            <i class="ti ti-brand-discord"></i> Discord
+          </a>
+        </li>
       </ul>
     </div>
-
+    <div class="container">
+      <section class="section" id="project-section">
+        <h2>Projects</h2>
+        <div id="projects">
+          <div class="project-info">
+            <h3 id="project-title">Valorant Agent Dashboard</h3>
+            <p id="project-description">
+              This is a dashboard that provides detailed information about
+              Valorant agents, including their abilities, roles, and more.
+            </p>
+          </div>
+          <div class="project-embed">
+            <a
+              href="https://valorant-agent-dashboard.netlify.app/"
+              target="_blank"
+            >
+              <img
+                src="media/valorant-agent-dashboard.png"
+                alt="Valorant Agent Dashboard Screenshot"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="about-section">
+        <h2>About Me</h2>
+        <p>
+          Hey, I'm Philip! I’m a software developer with a great interest in
+          technology. From gaming and computers to understanding the inner
+          workings of software, my journey into tech has been driven by
+          curiosity and the desire to build things that make an impact.<br />
+          <br />
+          I’m excited by the endless possibilities in tech, and enjoy developing
+          software, creating games, working with firmware, and building web
+          applications. My goal is to be a versatile developer with a wide range
+          of skills, always learning and adapting to new challenges.<br />
+          <br />
+          What drives me is the opportunity to craft unique, memorable
+          experiences while constantly evolving my work to stay fresh and
+          relevant. I believe in learning through doing, and I’m always eager to
+          tackle challenges that push me to grow as both a developer and a
+          problem solver.<br />
+          <br />
+          Outside of tech, I’m a competitive gamer, an anime fan, and someone
+          who loves to solder and cook. I've spent a good portion of my life as
+          a line cook, working with some of the best people I’ve ever met; those
+          experiences have shaped me into who I am today.<br />
+          <br />
+          I’m excited to continue growing as a developer and explore where this
+          journey takes me, embracing new opportunities as they come.<br />
+          <br />
+        </p>
+      </section>
+    </div>
     <footer>
       <p>&copy; 2025 Philip Jones. All rights reserved.</p>
       <div id="icons8_shoutout">Icons by Icons8</div>
