@@ -32,14 +32,26 @@ body.light-mode {
 }
 
 #PFP {
-    width: 80%;
+    width: 70%;
     border-radius: 50%;
-    margin: 5% 10%; /* Center the image */
+    margin: 5% 14%; /* Center the image */
 }
 
 #philip {
     font-size: 30px;
     text-align: center;
+}
+
+#role {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+#location {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
 }
 
 #icons8_shoutout {
@@ -208,6 +220,7 @@ nav.light-mode ul li a {
     min-height: 2000px;
     margin: auto;
     padding: 20px;
+    padding-left: 50px;
 }
 
 .section {
@@ -250,10 +263,11 @@ nav.light-mode ul li a {
 }
 
 .tools {
-    padding: 2px 5px;
+    padding: 2px 5px 3px 5px;
     border-radius: 8px;
     font-size: 11px;
 }
+
 
 #react {
     background: #61dbfb;
@@ -267,6 +281,7 @@ nav.light-mode ul li a {
 
 #typescript {
     background: #3178C6;
+    color: white;
 }
 
 #projects {
@@ -410,7 +425,7 @@ footer.light-mode {
     }
 
     .container {
-        margin: 0 auto; /* Center the container */
+        margin: auto; /* Center the container */
         padding: 10px; /* Reduce padding for smaller screens */
         max-width: 100%; /* Allow the container to take full width */
     }
