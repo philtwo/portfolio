@@ -34,7 +34,7 @@ body.light-mode {
 #PFP {
     width: 80%;
     border-radius: 50%;
-    margin: 25px 25px; /* Center the image */
+    margin: 5% 10%; /* Center the image */
 }
 
 #philip {
@@ -180,15 +180,6 @@ nav.light-mode ul li a {
     filter: blur(100px);
 }
 
-/* @keyframes colors {
-    0% {
-        filter: hue-rotate(0deg)
-    }
-
-    100% {
-        filter: hue-rotate(360deg)
-    }
-} */
 
 .cursor::before {
     z-index: -1;
@@ -213,7 +204,7 @@ nav.light-mode ul li a {
 }
 .container {
     z-index: 1;
-    max-width: 62.5%;
+    max-width: 1000px;
     min-height: 2000px;
     margin: auto;
     padding: 20px;
@@ -249,13 +240,42 @@ nav.light-mode ul li a {
     transform: scale(1.02); /* Scale up the image on hover */
 }
 
+/* Tool Styles */
+
+.project-tools {
+    display: flex;
+    flex-direction: row; /* Align items in a row */
+    gap: 25px;
+    width: auto;
+}
+
+.tools {
+    padding: 2px 5px;
+    border-radius: 8px;
+    font-size: 11px;
+}
+
+#react {
+    background: #61dbfb;
+    color: black;
+}
+
+#next {
+    background:#000000;
+    color: white;
+}
+
+#typescript {
+    background: #3178C6;
+}
+
 #projects {
     display: flex; /* Use Flexbox for layout */
     flex-direction: row; /* Align items in a row */
     justify-content: space-between; /* Add space between the two sections */
-    align-items: flex-start; /* Align items at the top */
+    align-items: center; /* Align items at the top */
     gap: 20px; /* Add space between the left and right sections */
-    margin-bottom: 20px; /* Add spacing between project cards */
+    margin-bottom: 5%; /* Add spacing between project cards */
     padding: 20px; /* Add padding inside the card */
     background: #3c3d3f; /* Background color for the card */
     border-radius: 8px; /* Rounded corners */
@@ -417,9 +437,13 @@ footer.light-mode {
         display: none; /* Hide the default nav bar */
     }
 
-    .project-card {
+    #projects {
         flex-direction: column; /* Stack sections vertically */
         align-items: center; /* Center align the content */
+    }
+
+    #philip {
+        font-size: 24px; /* Reduce font size for smaller screens */
     }
 }
     img {
