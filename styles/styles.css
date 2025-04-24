@@ -67,7 +67,7 @@ nav {
     height: 100%;
     background: #2f3033;
     padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 10px 10px 7px -6px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
     
@@ -101,11 +101,11 @@ nav ul li a {
     transition: color 0.3s;
     border-radius: 8px;
     padding: 10px;
-    transition: box-shadow 0.12s, background-color 0.12s, color 0.12s;
+    transition: background-color 0.12s, color 0.12s;
 }
 
 nav ul li a:hover {
-    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.253);
+    box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.253);
     
 }
 
@@ -130,50 +130,12 @@ nav.light-mode ul li a {
 }
 
 #theme-toggle:hover {
-    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.253);
+    box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.253);
 }
 
 #theme-toggle.light-mode {
     background: #f4f4f4;
     color: #333;
-}
-
-#contact {
-    text-align: center;
-}
-
-#contact.light-mode {
-    background: #e0e0e0;
-}
-
-#contact ul {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    text-align: center;
-
-}
-
-#contact ul li {
-    margin-bottom: 25px;
-    list-style: none;
-}
-
-#contact ul li a {
-    color: orange;
-    flex: 1;
-    text-decoration-line: none;
-    padding: 10px;
-    border-radius: 8px;
-    transition: box-shadow 0.12s, background-color 0.12s, color 0.12s;
-}
-
-#contact.light-mode ul li a {
-    color: #333;
-}
-
-#contact a:hover {
-    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.253);
 }
 
 .cursor {
@@ -184,12 +146,70 @@ nav.light-mode ul li a {
     height: 300px;
     border-radius: 50%;
     pointer-events: none;
-    box-shadow: 0 0 20px, #e8e526, 0 0 60px, #5de826, 0 0 100px, #b4e826;
+    box-shadow: 0 0 20px, #777777, 0 0 60px, #777777, 0 0 100px, #777777;
     transform: translate(-50%, -50%);
     animation: colors 5s infinite;
     display: none;
     inset: 0; /* Center the cursor */
     filter: blur(100px);
+}
+
+/* eyeball animation */
+
+@media (min-width: 1920px) {
+    .eyes-container {
+        opacity: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        position: fixed;
+        display: flex;
+        gap: 14px;
+        margin:5.3% 6.2%;
+      }
+    
+    .eyes-container.visible {
+        visibility: visible;
+        opacity: 1;
+      }
+   
+    .eye {
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(circle at 50% 50%, #ffffff, #f5f5f5);
+    border-radius: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    }
+    
+    .pupil {
+    width: 12px;
+    height: 12px;
+    background: radial-gradient(circle, #000 60%, #222 100%);
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.08s ease-out;
+    }
+    
+    .eyelid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f5d1a8;
+    border-radius: 20%;
+    transform: translateY(-100%);
+    transition: transform 0.2s ease-in-out;
+    }
+    
+    .eye.blink .eyelid {
+    transform: translateY(0);
+    }
 }
 
 
@@ -223,9 +243,11 @@ nav.light-mode ul li a {
     padding-left: 50px;
 }
 
+
+
 .section {
     z-index: 1;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 10px 6px -6px rgba(0, 0, 0, 0.3);
     margin-left: 190px;
     margin-bottom: 20px;
     min-width: 180px;
@@ -243,7 +265,7 @@ nav.light-mode ul li a {
 }
 
 .project-embed img{
-    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.253);
+    box-shadow: 0px 10px 6px -6px rgba(0, 0, 0, 0.3);
     display: block;
     border-radius: 8px;
     transition: transform 0.12s; /* Smooth transition for scaling */
@@ -294,7 +316,7 @@ nav.light-mode ul li a {
     padding: 20px; /* Add padding inside the card */
     background: #3c3d3f; /* Background color for the card */
     border-radius: 8px; /* Rounded corners */
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    box-shadow: 0px 10px 6px -6px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
     transition: background-color 0.3s;
 }
 
@@ -321,8 +343,7 @@ footer {
     padding: 10px;
     background: #2f3033;
     color: white;
-    transition: background-color 0.3s, color 0.3s;;
-    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.253);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 footer.light-mode {

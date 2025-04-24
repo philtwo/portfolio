@@ -6,8 +6,65 @@ const menuToggle = document.getElementById('menu-toggle');
 const mobileNav = document.getElementById('mobile-nav');
 const burgerMenu = document.getElementById('menu-toggle');
 const projectCard = document.getElementById('projects')
+const profilePicture = document.getElementById('PFP');
+const eyes = document.querySelector('.eyes-container');
 const cursor = document.querySelector('.cursor');
 var timeout;
+
+//eyeball animation
+document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('mousemove', function(e) {
+      const eyes = document.querySelectorAll('.eye');
+      
+      eyes.forEach(function(eye) {
+        const eyeRect = eye.getBoundingClientRect();
+        const pupil = eye.querySelector('.pupil');
+        
+        const eyeCenterX = eyeRect.left + eyeRect.width / 2;
+        const eyeCenterY = eyeRect.top + eyeRect.height / 2;
+        
+        const deltaX = e.clientX - eyeCenterX;
+        const deltaY = e.clientY - eyeCenterY;
+        
+        const angle = Math.atan2(deltaY, deltaX);
+        
+        
+        const radius = 6;
+        const moveX = Math.cos(angle) * radius;
+        const moveY = Math.sin(angle) * radius;
+        
+        pupil.style.transform = `translate(${moveX}px, ${moveY}px)`;
+      });
+    });
+    
+    
+    function randomBlink() {
+      const eyes = document.querySelectorAll('.eye');
+
+      eyes.forEach(eye => {
+        eye.classList.add('blink');
+        
+        setTimeout(() => {
+          eye.classList.remove('blink');
+        }, 200);
+      });
+      
+      const nextBlink = Math.random() * 5000 + 1000; // intervalo entre 1-6 segundos
+      setTimeout(randomBlink, nextBlink);
+    }
+    
+    setTimeout(randomBlink, 2000);
+  });
+
+  //enable eyeballs on PFP click
+profilePicture.addEventListener('click', () => {
+    if (eyes.classList.contains('visible')) {
+        eyes.classList.remove('visible'); // Remove the active class if it exists
+    }
+    else {
+        eyes.classList.add('visible'); // Toggle the active class on the eyes element
+    }
+});
 
 //cursor movement
 document.addEventListener('mousemove', (e) => {
@@ -23,20 +80,8 @@ document.addEventListener('mousemove', (e) => {
         cursor.style.left = x + 'px';
         cursor.style.display = 'block';
     }
-    //stop animation when mouse is not moving
-    // function mouseStopped() {
-    //     cursor.style.display = 'none';
-    // }
 
-    // //hide animation
-    // clearTimeout(timeout);
-    // timeout = setTimeout(mouseStopped, 1000); // 1 second delay
 });
-
-//stop hover off screen
-// document.addEventListener("mouseout", () => {
-//     cursor.style.display = 'none';
-// });
 
 // Initialize the theme
 function initializeTheme() {
