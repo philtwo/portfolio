@@ -9,6 +9,7 @@ const projectCard = document.getElementById('projects')
 const profilePicture = document.getElementById('PFP');
 const eyes = document.querySelector('.eyes-container');
 const cursor = document.querySelector('.cursor');
+const clickmeimg = document.getElementById('click-me');
 var timeout;
 
 //eyeball animation
@@ -104,6 +105,7 @@ function applyLightMode() {
     burgerMenu.classList.add('light-mode');
     mobileNav.classList.add('light-mode');
     cursor.classList.add('light-mode');
+    clickmeimg.src = 'media/clickMedark.png'; // Change the image source for light mode
     localStorage.setItem('theme', 'light-mode'); // save theme to local storage
     if(projectCard) {// Check if projectCard exists
         projectCard.classList.add('light-mode');
@@ -120,6 +122,7 @@ function applyDarkMode() {
     burgerMenu.classList.remove('light-mode');
     mobileNav.classList.remove('light-mode');
     cursor.classList.remove('light-mode');
+    clickmeimg.src = 'media/clickMe.png'; // Change the image source for dark mode
     localStorage.setItem('theme', 'dark-mode'); // save theme to local storage
     if(projectCard) {// Check if projectCard exists
         projectCard.classList.remove('light-mode');
