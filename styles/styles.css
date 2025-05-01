@@ -167,6 +167,7 @@ nav.light-mode ul li a {
         display: block;
         z-index: 999;
         position: fixed;
+        left: 1vw;
         width: 90px;   
         }
     .eyes-container {
@@ -240,15 +241,18 @@ nav.light-mode ul li a {
         display: block;
         z-index: 999;
         position: fixed;
-        width: 115px;   
+        width: 5vw;   
+        left: 0;
+        top: 0;
         }
     .eyes-container {
         z-index: 999;
         visibility: hidden;
         position: fixed;
+        top: 13vh;
+        left: 5.3vw;
         display: flex;
         gap: 10px;
-        margin:5.2% 6.3%;
     }
         
     .eyes-container.visible {
