@@ -249,7 +249,7 @@ nav.light-mode ul li a {
         z-index: 999;
         visibility: hidden;
         position: fixed;
-        top: 13vh;
+        top: 9.5vh;
         left: 5.3vw;
         display: flex;
         gap: 10px;
