@@ -1,8 +1,10 @@
 body {
+    width: 88vw;
+    height: auto;
     z-index: 1;
     background-color: #4c4c52;
     font-family: Arial, sans-serif;
-    margin: 0;
+    margin: auto auto auto 12vw;
     padding: 0;
     color: white;
     transition: background-color 0.3s, color 0.3s;
@@ -62,15 +64,13 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    width: 14%;
-    min-width: 180px;
-    height: 100%;
+    width: 12vw;
+    height: 100vh;
     background: #2f3033;
     padding: 20px;
     box-shadow: 10px 10px 7px -6px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
-    
     transition: background-color 0.3s;
 }
 
@@ -318,11 +318,10 @@ nav.light-mode ul li a {
 }
 .container {
     z-index: 1;
-    max-width: 1000px;
-    min-height: 2000px;
-    margin: auto;
-    padding: 20px;
-    padding-left: 50px;
+    max-width: 60vw;
+    min-height: 100vh;
+    margin: auto; /* Center the container */
+    padding: 0;
 }
 
 
@@ -330,8 +329,7 @@ nav.light-mode ul li a {
 .section {
     z-index: 1;
     box-shadow: 0px 10px 6px -6px rgba(0, 0, 0, 0.3);
-    margin-left: 190px;
-    margin-bottom: 20px;
+    margin: 25px;
     min-width: 180px;
     padding: 1px 20px;
     background: #2f3033;
@@ -340,6 +338,7 @@ nav.light-mode ul li a {
 }
 
 .project-embed {
+    z-index: 1;
     flex: 1; /* Take up available space on the right */
     display: flex;
     justify-content: center; /* Center the embed horizontally */
@@ -347,6 +346,7 @@ nav.light-mode ul li a {
 }
 
 .project-embed video{
+    z-index: 1;
     height: auto;
     width: 100%;
     box-shadow: 0px 10px 6px -6px rgba(0, 0, 0, 0.3);
@@ -404,6 +404,7 @@ nav.light-mode ul li a {
     transition: background-color 0.3s;
 }
 
+
 #projects.light-mode {
     background: #f4f4f4; /* Light mode background color */
 }
@@ -443,6 +444,7 @@ footer.light-mode {
 
 #hamburger-menu {
     display: none; /* Hide by default */
+    z-index: 999;
 }
 
 #menu-toggle {
@@ -459,23 +461,21 @@ footer.light-mode {
 
 #mobile-nav {
     position: absolute;
-    z-index: 999;
     width: 50%;
-    /* border: 2px solid #e9e9e9; */
     border-radius: 8px;
     list-style: none;
     padding: 0;
-    margin: 0 10px;
-    background: #2f303370;
+    margin: 0 1vw;
+    background: #191a1b70;
     backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.253);
+    box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.274);
 }
 
 #mobile-nav.light-mode{
-    background: #e0e0e0;
+    background: #e0e0e077;
 }
 #mobile-nav li {
     margin: 10px;
@@ -501,15 +501,34 @@ footer.light-mode {
     display: block;
 }
 
+
+
 /* Mobile Styles */
 
 @media (max-width: 768px) {
+    html {
+        touch-action: pan-y; /* Allow vertical scrolling */
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+
+    body {
+        width: 100vw;
+        height: auto;
+        background-color: #4c4c52;
+        font-family: Arial, sans-serif;
+        margin: auto;
+        padding: 0;
+        color: white;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    
     nav {
-        position: static; /* Make the nav bar flow with the page */
+        position: static;
         width: 100%; /* Full width for mobile */
-        height: auto; /* Adjust height automatically */
-        padding: 10px;
+        height: 7vh; /* Adjust height automatically */
         box-shadow: 0 10px 6px -6px rgb(0, 0, 0, 0.3); /* Add shadow for depth */
+        padding: 0px;
+        margin: 0;
         }
 
     nav ul {
@@ -527,12 +546,14 @@ footer.light-mode {
     nav ul li a {
         width: auto; /* Allow links to adjust width dynamically */
         padding: 5px 10px; /* Adjust padding for smaller screens */
-        font-size: 10px; /* Smaller font size for links */
     }
 
     #theme-toggle {
-        margin: 0 21px 0 0; /* Add spacing for the toggle button */
-        font-size: 14px; /* Smaller font size for the button */
+        width: 95vw;
+        height: 5vh;
+        padding: 0;
+        margin: auto;
+        font-size: 15px; /* Smaller font size for the button */
     }
 
     #theme-toggle:hover {
@@ -549,15 +570,13 @@ footer.light-mode {
         margin-top: 10px; /* Adjust margin for smaller screens */
     }
 
-    .container {
-        margin: auto; /* Center the container */
-        padding: 10px; /* Reduce padding for smaller screens */
-        max-width: 100%; /* Allow the container to take full width */
+    .container { /* Center the container */
+        max-width: none; /* Remove max-width for mobile */
+        width: 100%; /* Allow the container to take full width */
     }
 
     .section {
-        margin-left: 0; /* Remove left margin */
-        padding: 15px; /* Adjust padding for smaller screens */
+        min-width: 200px; /* Set a minimum width for sections */
     }
 
     h2 {
@@ -569,8 +588,15 @@ footer.light-mode {
         line-height: 1.4; /* Adjust line height for readability */
     }
 
+    footer {
+        padding: 10px 0; /* Adjust padding for footer */
+    }
+
     #hamburger-menu {
         display: block; /* Show hamburger menu on small screens */
+        position: sticky; /* Make it sticky to the top */
+        top: 0;
+        padding: 10px; /* Add padding for better touch targets */
     }
 
     nav ul {
@@ -586,8 +612,8 @@ footer.light-mode {
         font-size: 24px; /* Reduce font size for smaller screens */
     }
 }
-    img {
+img {
     max-width: 100%; /* Scale images to fit within their container */
     height: auto; /* Maintain aspect ratio */
-    }
+}
 
