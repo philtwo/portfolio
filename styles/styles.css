@@ -350,6 +350,19 @@ nav.light-mode ul li a {
     align-items: center; /* Center the embed vertically */
 }
 
+.project-embed img{
+    z-index: 1;
+    height: auto;
+    width: 100%;
+    box-shadow: 0px 10px 6px -6px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    transition: transform 0.12s; /* Smooth transition for scaling */
+}
+
+.project-embed img:hover {
+    transform: scale(1.02); /* Scale up the image on hover */
+}
+
 .project-embed video{
     z-index: 1;
     height: auto;
@@ -374,28 +387,20 @@ nav.light-mode ul li a {
 }
 
 .tools {
-    padding: 2px 5px 3px 5px;
+    padding: 3px 5px 4px 5px;
     border-radius: 8px;
     font-size: 11px;
+    background: #2f3033;
+    border: #11b1e2 1px solid;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-
-#react {
-    background: #61dbfb;
-    color: black;
+.tools.light-mode {
+    background: #e0e0e0;
+    border: #11b1e2 1px solid;
 }
 
-#next {
-    background:#000000;
-    color: white;
-}
-
-#typescript {
-    background: #3178C6;
-    color: white;
-}
-
-#projects {
+.projects {
     display: flex; /* Use Flexbox for layout */
     flex-direction: row; /* Align items in a row */
     justify-content: space-between; /* Add space between the two sections */
@@ -410,7 +415,7 @@ nav.light-mode ul li a {
 }
 
 
-#projects.light-mode {
+.projects.light-mode {
     background: #f4f4f4; /* Light mode background color */
 }
 
@@ -510,7 +515,7 @@ footer.light-mode {
 
 /* Mobile Styles */
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     html {
         touch-action: pan-y; /* Allow vertical scrolling */
         overflow-x: hidden; /* Prevent horizontal scrolling */

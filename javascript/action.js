@@ -5,7 +5,8 @@ const footer = document.querySelector('footer');
 const menuToggle = document.getElementById('menu-toggle');
 const mobileNav = document.getElementById('mobile-nav');
 const burgerMenu = document.getElementById('menu-toggle');
-const projectCard = document.getElementById('projects')
+const projectCards = document.querySelectorAll('.projects')
+const tools = document.querySelectorAll('.tools');
 const profilePicture = document.getElementById('PFP');
 const eyes = document.querySelector('.eyes-container');
 const cursor = document.querySelector('.cursor');
@@ -107,8 +108,15 @@ function applyLightMode() {
     cursor.classList.add('light-mode');
     clickmeimg.src = 'media/clickMedark.png'; // Change the image source for light mode
     localStorage.setItem('theme', 'light-mode'); // save theme to local storage
-    if(projectCard) {// Check if projectCard exists
-        projectCard.classList.add('light-mode');
+    if(projectCards) {// Check if projectCard exists
+        projectCards.forEach(projectCard => {
+            projectCard.classList.add('light-mode');
+        });
+    }
+    if(tools) {// Check if tools exists
+        tools.forEach(tool => {
+            tool.classList.add('light-mode');
+        });
     }
 }
 
@@ -124,8 +132,15 @@ function applyDarkMode() {
     cursor.classList.remove('light-mode');
     clickmeimg.src = 'media/clickMe.png'; // Change the image source for dark mode
     localStorage.setItem('theme', 'dark-mode'); // save theme to local storage
-    if(projectCard) {// Check if projectCard exists
-        projectCard.classList.remove('light-mode');
+    if(projectCards) {// Check if projectCard exists
+        projectCards.forEach(projectCard => {
+            projectCard.classList.remove('light-mode');
+        });
+    }
+    if(tools) {// Check if tools exists
+        tools.forEach(tool => {
+            tool.classList.remove('light-mode');
+        });
     }
 }
 

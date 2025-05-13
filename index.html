@@ -31,15 +31,16 @@
         </li>
         <hr />
         <li>
-          <a href="#about-section" title="About Me"
-            ><i class="ti ti-info-circle"></i> About</a
-          >
-        </li>
-        <li>
           <a href="#project-section" title="Projects"
             ><i class="ti ti-geometry"></i> Projects</a
           >
         </li>
+        <li>
+          <a href="#about-section" title="About Me"
+            ><i class="ti ti-info-circle"></i> About</a
+          >
+        </li>
+
         <li>
           <a href="https://github.com/philtwo" target="_blank" title="GitHub"
             ><i class="devicon-github-original"></i> GitHub</a
@@ -135,7 +136,7 @@
     <div class="container">
       <section class="section" id="project-section">
         <h2>Projects</h2>
-        <div id="projects">
+        <div class="projects">
           <div class="project-info">
             <h3 id="project-title">Valorant Agent Dashboard</h3>
             <p id="project-description">
@@ -143,9 +144,9 @@
               Valorant agents, including their abilities, roles, and more.
             </p>
             <div class="project-tools">
-              <small class="tools" id="react">React</small>
-              <small class="tools" id="next">Next.JS</small>
-              <small class="tools" id="typescript">Typescipt</small>
+              <small class="tools">React</small>
+              <small class="tools">Next.JS</small>
+              <small class="tools">Typescipt</small>
             </div>
           </div>
           <div class="project-embed">
@@ -161,6 +162,31 @@
                 loop
                 id="project-video"
               ></video>
+            </a>
+          </div>
+        </div>
+        <div class="projects">
+          <div class="project-info">
+            <h3 id="project-title">Arduino mega 2560 alarm system</h3>
+            <p id="project-description">
+              Custom alarm system using an Arduino Mega 2560 and ultrasonic
+              distance sensors. Developed embedded C++ code to continuously
+              monitor distance values and trigger an alarm if movement was
+              detected within a defined proximity range.
+            </p>
+            <div class="project-tools">
+              <small class="tools">C++</small>
+              <small class="tools">Fusion 360</small>
+              <small class="tools">arduino IDE</small>
+              <small class="tools">OrcaSlicer</small>
+            </div>
+          </div>
+          <div class="project-embed">
+            <a
+              href="https://github.com/philtwo/AlarmSystem/tree/main"
+              target="_blank"
+            >
+              <img id="project-video" src="./media/alarmSystem.png" />
             </a>
           </div>
         </div>
