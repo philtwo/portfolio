@@ -384,7 +384,8 @@ nav.light-mode ul li a {
 .project-tools {
     display: flex;
     flex-direction: row; /* Align items in a row */
-    gap: 25px;
+    flex-wrap: wrap;
+    gap: 10px;
     width: auto;
 }
 
@@ -615,7 +616,7 @@ footer.light-mode {
         display: none; /* Hide the default nav bar */
     }
 
-    #projects {
+    .projects {
         flex-direction: column; /* Stack sections vertically */
         align-items: center; /* Center align the content */
     }
