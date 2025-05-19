@@ -80,7 +80,7 @@ document.addEventListener('mousemove', (e) => {
         
         cursor.style.top = y + 'px';
         cursor.style.left = x + 'px';
-        cursor.style.display = 'block';
+        // cursor.style.display = 'block';
     }
 
 });

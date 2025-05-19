@@ -139,7 +139,7 @@ nav.light-mode ul li a {
 }
 
 .cursor {
-    z-index: -1;
+    z-index: 0;
     position: fixed;
     background: #777777;
     width: 300px;
@@ -154,7 +154,7 @@ nav.light-mode ul li a {
     filter: blur(100px);
 }
 .cursor::before {
-    z-index: -1;
+    z-index: 0;
     content: '';
     position: absolute;
     width: 300px;
